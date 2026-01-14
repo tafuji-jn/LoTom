@@ -47,9 +47,9 @@
         MOUSE {
             bindings = <
 &trans     &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &trans    &msc SCRL_UP    &trans    &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &none          &mkp MB1  &mkp MB3        &mkp MB2  &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &mkp MB1  &msc SCRL_DOWN  &trans    &trans
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &mkp MB1  &msc SCRL_UP    &mkp MB2  &trans
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(C)      &mkp MB1  &mkp MB3        &mkp MB2  &to 1
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(V)      &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &to 0
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp BACKSPACE  &trans    &trans
             >;
 
