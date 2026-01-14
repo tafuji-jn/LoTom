@@ -47,10 +47,10 @@
         MOUSE {
             bindings = <
 &trans     &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &trans  &trans  &mo 3   &trans    &trans
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &trans    &msc SCRL_UP    &trans    &trans
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &none          &mkp MB1  &mkp MB3        &mkp MB2  &trans
+&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &mkp MB1  &msc SCRL_DOWN  &trans    &trans
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp BACKSPACE  &trans    &trans
             >;
 
             sensor-bindings = <
