@@ -50,11 +50,11 @@
 
         default_layer {
             bindings = <
-&bt BT_CLR_ALL  &bt BT_CLR_ALL
-&bt BT_SEL 0    &bt BT_SEL 1    &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E           &kp I           &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
-&kp Z           &kp X           &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT    &kp LGUI        &lt 5 LANGUAGE_1  &lt 4 SPACE  &kp BACKSPACE  &to 1             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&kp ESC       &mo 6
+&kp Q         &kp L     &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E         &kp I     &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
+&kp Z         &kp X     &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
+&kp LEFT_ALT  &kp LGUI  &lt 5 LANGUAGE_1  &lt 4 SPACE  &kp BACKSPACE  &to 1             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
@@ -125,11 +125,11 @@
 
         FUNCTION {
             bindings = <
-&bt BT_CLR_ALL  &trans
-&trans          &trans         &trans  &trans  &trans  &trans  &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
-&trans          &kp LG(LS(S))  &trans  &trans  &trans  &trans  &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
-&trans          &trans         &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans   &trans  &kp F11
-&trans          &trans         &trans  &trans  &trans  &trans  &trans   &trans  &trans  &kp F12
+&bt BT_CLR    &trans
+&bt BT_SEL 0  &trans         &trans  &trans  &trans  &trans  &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
+&bt BT_SEL 1  &kp LG(LS(S))  &trans  &trans  &trans  &trans  &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
+&bt BT_SEL 2  &trans         &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans   &trans  &kp F11
+&trans        &trans         &trans  &trans  &trans  &trans  &trans   &trans  &trans  &kp F12
             >;
 
             sensor-bindings = <
