@@ -45,11 +45,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &mo 6
-&kp Q       &kp L     &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT      &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E       &kp I     &kp A             &kp O        &kp MINUS      &kp CAPSLOCK   &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
-&kp Z       &kp X     &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)  &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
-&kp TAB     &kp LGUI  &lt 5 LANGUAGE_2  &lt 4 SPACE  &kp BACKSPACE  &mo 2          &kp ENTER      &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&kp ESCAPE    &mo 6
+&kp Q         &kp L     &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E         &kp I     &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
+&kp Z         &kp X     &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
+&kp LEFT_ALT  &kp LGUI  &lt 5 LANGUAGE_2  &lt 4 SPACE  &kp BACKSPACE  &mo 2             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
@@ -109,7 +109,7 @@
 &kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS      &trans  &trans  &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
 &kp SLASH                &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &kp ASTERISK  &trans  &trans  &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
 &mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans  &trans  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans                   &trans        &trans        &trans                &trans        &trans  &trans  &trans           &trans        &trans
+&trans                   &trans        &trans        &trans                &trans        &trans  &trans  &kp LS(ENTER)    &trans        &trans
             >;
 
             sensor-bindings = <
