@@ -91,10 +91,10 @@
         ARROW {
             bindings = <
 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &kp UP_ARROW    &trans           &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans           &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &kp DOWN_ARROW  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans
             >;
 
             sensor-bindings = <
