@@ -50,11 +50,11 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE    &bt BT_CLR_ALL
-&kp Q         &kp L           &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E         &kp I           &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
-&kp Z         &kp X           &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT  &kp LGUI        &lt 5 LANGUAGE_1  &lt 4 SPACE  &kp BACKSPACE  &to 1             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&bt BT_CLR_ALL  &bt BT_CLR_ALL
+&bt BT_SEL 0    &bt BT_SEL 1    &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E           &kp I           &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
+&kp Z           &kp X           &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
+&kp LEFT_ALT    &kp LGUI        &lt 5 LANGUAGE_1  &lt 4 SPACE  &kp BACKSPACE  &to 1             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
