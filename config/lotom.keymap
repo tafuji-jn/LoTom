@@ -49,7 +49,7 @@
 &kp Q         &kp L     &kp U             &kp COMMA    &kp PERIOD     &sk LSHFT         &kp RIGHT_ALT  &kp F        &kp W      &kp R      &kp Y  &kp P
 &kp E         &kp I     &kp A             &kp O        &kp MINUS      &kp LS(CAPSLOCK)  &kp LC(C)      &kp K        &kp T      &kp N      &kp S  &kp H
 &kp Z         &kp X     &kp C             &kp V        &kp SEMICOLON  &kp LA(ENTER)     &kp LC(V)      &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT  &kp LGUI  &lt 5 LANGUAGE_2  &lt 4 SPACE  &kp BACKSPACE  &mo 2             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&kp LEFT_ALT  &kp LGUI  &lt 5 LANGUAGE_2  &lt 4 SPACE  &kp BACKSPACE  &to 1             &kp TAB        &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
@@ -64,7 +64,7 @@
 &trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &mkp MB1  &msc SCRL_UP    &mkp MB2  &trans
 &trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(C)      &mkp MB1  &mkp MB3        &mkp MB2  &to 1
 &trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(V)      &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &to 0
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &trans  &trans  &kp BACKSPACE  &trans    &trans
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &to 0   &trans  &kp BACKSPACE  &trans    &trans
             >;
 
             sensor-bindings = <
