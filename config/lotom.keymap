@@ -43,6 +43,16 @@
             bindings = <&kp INT1>;
             key-positions = <10 11>;
         };
+
+        kakko {
+            bindings = <&kakko>;
+            key-positions = <4 5>;
+        };
+
+        inyou {
+            bindings = <&inyou>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
@@ -51,6 +61,13 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_1 &kp LS(N8) &kp LS(N9) &kp ENTER &kp LEFT>;
             label = "KAKKO";
+        };
+
+        inyou: inyou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LS(PERIOD)>;
+            label = "INYOU";
         };
     };
 
