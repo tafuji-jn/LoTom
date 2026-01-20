@@ -35,7 +35,7 @@
         };
 
         question {
-            bindings = <&atmark>;
+            bindings = <&kp QUESTION>;
             key-positions = <34 35>;
         };
 
@@ -85,7 +85,7 @@
         underbar: underbar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp UNDER>;
+            bindings = <&kp LANGUAGE_2 &kp LS(INT5)>;
             label = "UNDERBAR";
         };
     };
