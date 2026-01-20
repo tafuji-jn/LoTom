@@ -53,6 +53,11 @@
             bindings = <&inyou>;
             key-positions = <16 17>;
         };
+
+        underbar {
+            bindings = <&underbar>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
@@ -76,6 +81,13 @@
             bindings = <&kp LANGUAGE_2 &kp N8>;
             label = "ATMARK";
         };
+
+        underbar: underbar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp UNDER>;
+            label = "UNDERBAR";
+        };
     };
 
     keymap {
@@ -83,11 +95,11 @@
 
         default_layer {
             bindings = <
-&kp ESC       &mo 6
-&kp Q         &kp L     &kp U             &kp COMMA      &kp PERIOD     &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E         &kp I     &kp A             &kp O          &kp MINUS      &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
-&kp Z         &kp X     &kp C             &kp V          &kp SEMICOLON  &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT  &kp LGUI  &lt 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE    &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&mt LEFT_SHIFT ESC  &mo 6
+&kp Q               &kp L     &kp U             &kp COMMA      &kp PERIOD     &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E               &kp I     &kp A             &kp O          &kp MINUS      &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
+&kp Z               &kp X     &kp C             &kp V          &kp SEMICOLON  &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
+&kp LEFT_ALT        &kp LGUI  &lt 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE    &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
@@ -144,10 +156,10 @@
         NUM {
             bindings = <
 &trans                   &trans
-&kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp LG(LS(NUMBER_4))  &kp PLUS      &trans  &trans  &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
-&kp SLASH                &kp F7        &kp NUMBER_5  &kp F10               &kp ASTERISK  &trans  &trans  &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp PERIOD    &trans  &trans  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans                   &trans        &trans        &trans                &trans        &trans  &trans  &kp LS(ENTER)    &trans        &trans
+&kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &trans  &trans      &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
+&kp SLASH                &kp F7        &kp NUMBER_5  &kp F10       &kp ASTERISK  &trans  &trans      &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &kp PERIOD  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans                   &trans        &trans        &trans        &trans        &trans  &trans      &kp LS(ENTER)    &trans        &trans
             >;
 
             sensor-bindings = <
