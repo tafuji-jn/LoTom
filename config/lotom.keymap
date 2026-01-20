@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         atmark {
-            bindings = <&kp AT>;
+            bindings = <&kp LS(NUMBER_2)>;
             key-positions = <22 23>;
         };
 
@@ -40,7 +40,7 @@
         };
 
         nakaguro {
-            bindings = <&kp INT1>;
+            bindings = <&kp SLASH>;
             key-positions = <10 11>;
         };
 
