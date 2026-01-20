@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         atmark {
-            bindings = <&kp LS(NUMBER_2)>;
+            bindings = <&kp LBKT>;
             key-positions = <22 23>;
         };
 
