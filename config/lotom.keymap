@@ -35,7 +35,7 @@
         };
 
         question {
-            bindings = <&kp QUESTION>;
+            bindings = <&atmark>;
             key-positions = <34 35>;
         };
 
@@ -68,6 +68,13 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp LS(PERIOD)>;
             label = "INYOU";
+        };
+
+        atmark: atmark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp N8>;
+            label = "ATMARK";
         };
     };
 
