@@ -3,6 +3,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <physical_layouts.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include "lotom.dtsi"
 
 / {
@@ -66,11 +67,11 @@
 
 &trackball_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 1 100000>;
+    input-processors = <&pointer_accel &zip_temp_layer 1 100000>;
 
     scroll {
         layers = <2>;
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+        input-processors = <&pointer_accel &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
     };
 };
 

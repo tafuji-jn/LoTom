@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/englmaxi
     - name: te9no
       url-base: https://github.com/te9no
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -26,6 +28,9 @@ manifest:
       revision: main
     - name: zmk-nice-oled
       remote: mctechnology17
+      revision: main
+    - name: zmk-pointing-acceleration
+      remote: oleksandrmaslov
       revision: main
   self:
     path: config
