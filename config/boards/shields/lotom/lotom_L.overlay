@@ -80,6 +80,16 @@
     excluded-positions = <0 10 11 12 22 23 24 25 26 34 35 36>;
 };
 
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <800>;
+    max-factor = <3000>;
+    speed-threshold = <1200>;
+    speed-max = <6000>;
+    acceleration-exponent = <2>;
+};
+
 // I2C設定 (OLED用)
 &pinctrl {
     i2c1_default: i2c1_default {
