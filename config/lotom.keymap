@@ -97,7 +97,7 @@
         };
 
         underbar {
-            bindings = <&underbar>;
+            bindings = <&kp JP_UNDERSCORE>;
             key-positions = <28 29>;
         };
     };
@@ -142,12 +142,6 @@
             label = "ATMARK";
         };
 
-        underbar: underbar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp LS(MINUS)>;
-            label = "UNDERBAR";
-        };
     };
 
     keymap {
