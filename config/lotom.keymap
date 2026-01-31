@@ -103,6 +103,11 @@
             bindings = <&kp JP_UNDERSCORE>;
             key-positions = <28 29>;
         };
+
+        jpyen {
+            bindings = <&kp A>;
+            key-positions = <9 10>;
+        };
     };
 
     macros {
@@ -166,11 +171,11 @@
 
         MOUSE {
             bindings = <
-&trans     &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &trans         &mkp MB1  &msc SCRL_UP    &mkp MB2  &trans
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(C)      &mkp MB1  &mkp MB3        &mkp MB2  &mo 2
-&trans     &trans        &trans            &trans          &trans  &trans  &trans  &kp LC(V)      &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &to 0
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans  &to 0   &trans  &kp BACKSPACE  &trans    &trans
+&trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &mkp MB1  &msc SCRL_UP    &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(C)  &mkp MB1  &mkp MB3        &mkp MB2  &mo 2
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(V)  &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &to 0
+&trans  &trans  &trans  &trans  &trans  &to 0   &kp BACKSPACE  &trans     &trans    &trans
             >;
 
             sensor-bindings = <
