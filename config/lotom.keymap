@@ -7,6 +7,7 @@
 #define MOUSE 1
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -44,11 +45,13 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_exit_AML_ON_TAP";
             bindings = <&kp>, <&kp_exit_AML>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
@@ -141,7 +144,6 @@
             bindings = <&kp LANGUAGE_2 &kp N8>;
             label = "ATMARK";
         };
-
     };
 
     keymap {
@@ -149,11 +151,11 @@
 
         default_layer {
             bindings = <
-&mt_exit_AML_on_tap LSHFT ESC     &mo 6
-&kp Q             &kp L     &kp U             &kp COMMA      &kp PERIOD     &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E             &kp I     &kp A             &kp O          &kp MINUS      &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C             &kp V          &kp SEMICOLON  &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT      &kp LGUI  &lt 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE    &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&mt_exit_AML_on_tap LSHFT ESCAPE  &mo 6
+&kp Q                             &kp L     &kp U             &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E                             &kp I     &kp A             &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C             &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
+&kp LEFT_ALT                      &kp LGUI  &lt 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE  &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
