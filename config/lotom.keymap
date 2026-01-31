@@ -105,7 +105,7 @@
         };
 
         jpyen {
-            bindings = <&kp A>;
+            bindings = <&kp JP_YEN>;
             key-positions = <9 10>;
         };
     };
