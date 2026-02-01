@@ -164,12 +164,25 @@ keymapのキー配置（0から順番）:
 ```
 
 ### マウスキー追加時
-1. MOUSEレイヤーにマウス関連キーを追加
-2. そのキー位置を`excluded-positions`に追加
-3. 両方のoverlayファイル（lotom_L.overlay, lotom_R.overlay）を更新
+MOUSEレイヤーにキーを追加すると、ビルド時に`scripts/update_excluded_positions.py`が自動的に`excluded-positions`を更新します。
 
-### Shift+クリック対応
-位置0と26は`mt_exit_AML_on_tap`を使用。ホールド時はShiftとして機能しマウスレイヤーを維持、タップ時はマウスレイヤーを解除してキー入力。
+**自動検出対象:**
+- MOUSEレイヤー: `&trans`と`&to 0`以外のすべてのキー
+- デフォルトレイヤー: `&mt_exit_AML_on_tap`の位置（Shift+クリック対応）
+
+**手動での追加は不要です。**
+
+### スクリプトの動作
+1. `config/lotom.keymap`のMOUSEレイヤーをパース
+2. `&trans`と`&to 0`以外のキー位置を抽出
+3. デフォルトレイヤーの`&mt_exit_AML_on_tap`位置を追加
+4. `config/boards/shields/lotom/lotom_L.overlay`の`excluded-positions`を更新
+5. GitHub Actionsで自動実行（変更があればコミット）
+
+### ローカルでの実行
+```bash
+python scripts/update_excluded_positions.py
+```
 
 
 
