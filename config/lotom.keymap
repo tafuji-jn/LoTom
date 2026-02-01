@@ -154,14 +154,14 @@
         password1: password1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <__PASSWORD1__>;
+            bindings = <&none>;  // __PASSWORD1__
             label = "PASSWORD1";
         };
 
         password2: password2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <__PASSWORD2__>;
+            bindings = <&none>;  // __PASSWORD2__
             label = "PASSWORD2";
         };
     };
