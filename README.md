@@ -126,4 +126,4 @@ Keymap Editorから `&swapper`, `&tab_next`, `&tab_prev` を選択して配置�
 ## その他
 
 不明な点がある場合は下記アカウントにご連絡ください
-https://x.com/tomcat09131
+
