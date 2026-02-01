@@ -106,5 +106,70 @@ projects:
 2. ignored-key-positionsに必要なキー位置を設定
 3. Keymap Editorから`&新しいswapper名`で選択可能
 
+# オートマウスレイヤー (zip_temp_layer)
+
+## 概要
+トラックボールを操作すると自動的にMOUSEレイヤー(レイヤー1)に切り替わる機能。
+
+## 設定ファイル
+* `config/boards/shields/lotom/lotom_L.overlay`
+* `config/boards/shields/lotom/lotom_R.overlay`
+
+## パラメータ
+
+### trackball_listener
+```c
+input-processors = <&pointer_accel &zip_temp_layer 1 100000>;
+```
+* `&pointer_accel`: 加速度処理
+* `&zip_temp_layer 1 100000`: レイヤー1に切り替え、タイムアウト100秒（実質無効）
+
+### zip_temp_layer設定
+```c
+&zip_temp_layer {
+    require-prior-idle-ms = <350>;
+    excluded-positions = <0 10 11 12 22 23 24 25 26 34 35 36>;
+};
+```
+
+## excluded-positions
+
+マウスレイヤー解除をトリガーしないキー位置のリスト。これらのキーを押してもマウスレイヤーに留まる。
+
+### 現在の設定値
+
+| 位置 | キー | 説明 |
+|------|------|------|
+| 0 | mt_exit_AML_on_tap LSHFT ESC | 左上Shift（ホールド時はレイヤー維持、タップ時は解除） |
+| 10 | mkp MB1 | マウスボタン1（左クリック） |
+| 11 | msc SCRL_UP | スクロールアップ |
+| 12 | mkp MB2 | マウスボタン2（右クリック） |
+| 22 | mkp MB1 | マウスボタン1（左クリック） |
+| 23 | mkp MB3 | マウスボタン3（中クリック） |
+| 24 | mkp MB2 | マウスボタン2（右クリック） |
+| 25 | mo 2 | SCROLLレイヤーへの一時切替 |
+| 26 | mt_exit_AML_on_tap LEFT_SHIFT Z | 左下Shift（ホールド時はレイヤー維持、タップ時は解除） |
+| 34 | mkp MB1 | マウスボタン1（左クリック） |
+| 35 | msc SCRL_DOWN | スクロールダウン |
+| 36 | mkp MB2 | マウスボタン2（右クリック） |
+
+### キー位置の計算方法
+keymapのキー配置（0から順番）:
+```
+位置0      位置1        ← エンコーダー行
+位置2-7    位置8-13     ← 上段
+位置14-19  位置20-25    ← 中段
+位置26-31  位置32-37    ← 下段
+位置38-43  位置44-47    ← 親指行
+```
+
+### マウスキー追加時
+1. MOUSEレイヤーにマウス関連キーを追加
+2. そのキー位置を`excluded-positions`に追加
+3. 両方のoverlayファイル（lotom_L.overlay, lotom_R.overlay）を更新
+
+### Shift+クリック対応
+位置0と26は`mt_exit_AML_on_tap`を使用。ホールド時はShiftとして機能しマウスレイヤーを維持、タップ時はマウスレイヤーを解除してキー入力。
+
 
 
