@@ -102,6 +102,16 @@
 
             ignored-key-positions = <8 26>;  // Shiftキー
         };
+
+        /* 短いtapping-termのlayer-tap (LANGUAGE_1用) */
+
+        lt_quick: layer_tap_quick {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     combos {
@@ -258,7 +268,7 @@
 &kp Q                             &kp L     &kp U             &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
 &kp E                             &kp I     &kp A             &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C             &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
-&kp LEFT_ALT                      &kp LGUI  &lt 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE  &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
+&kp LEFT_ALT                      &kp LGUI  &lt_quick 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE  &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
             sensor-bindings = <
