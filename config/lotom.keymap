@@ -270,9 +270,9 @@
         MOUSE {
             bindings = <
 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &mkp MB1  &msc SCRL_UP    &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(C)  &mkp MB1  &mkp MB3        &mkp MB2  &mo 2
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(V)  &mkp MB1  &msc SCRL_DOWN  &mkp MB2  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans    &kp LC(PAGE_UP)    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(C)  &mkp MB1  &mkp MB3           &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(V)  &trans    &kp LC(PAGE_DOWN)  &trans    &to 0
 &trans  &trans  &trans  &trans  &trans  &to 0   &kp BACKSPACE  &trans     &trans    &trans
             >;
 
