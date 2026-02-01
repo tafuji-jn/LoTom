@@ -150,20 +150,20 @@
             label = "ATMARK";
         };
 
-        // パスワード入力マクロ (ビルド時にSecretsの値で置換される)
+        /* パスワード入力マクロ (ビルド時にSecretsの値で置換される) */
 
         password1: password1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;  // __PASSWORD1__
-            label = "PASSWORD1";
+            bindings = <&none>;
+            label = "__PASSWORD1__";
         };
 
         password2: password2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;  // __PASSWORD2__
-            label = "PASSWORD2";
+            bindings = <&none>;
+            label = "__PASSWORD2__";
         };
     };
 
