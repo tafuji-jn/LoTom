@@ -74,7 +74,9 @@
 1. LoTom_privateリポジトリのSettings → Secrets and variables → Actionsで以下を設定:
    - `PASSWORD1` 〜 `PASSWORD9`: パスワード文字列（必要なものだけ設定すればOK）
 2. 対応文字: 英数字(a-z, A-Z, 0-9)、主要な記号（日本語キーボードレイアウト対応）
-3. Secretsが未設定のマクロは `&none` のまま（何も入力されない）
+3. 特殊キー: `{TAB}`, `{ENTER}`, `{ESC}`, `{BACKSPACE}`, `{DELETE}`, 矢印キー
+   - 例: `username{TAB}password{ENTER}` → ユーザー名入力 → Tab → パスワード入力 → Enter
+4. Secretsが未設定のマクロは `&none` のまま（何も入力されない）
 
 ### keymapでの使用
 
