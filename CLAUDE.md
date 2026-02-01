@@ -59,7 +59,7 @@ password1: password1 {
 
 ## zmk-tri-state
 * リポジトリ: https://github.com/dhruvinsh/zmk-tri-state
-* 用途: Alt+Tab swapper（ウィンドウ切り替え）
+* 用途: ウィンドウ/タブ切り替え用swapper
 
 ### 概要
 ZMK本体にはない「tri-state」behaviorを提供する外部モジュール。
@@ -76,28 +76,35 @@ projects:
     revision: main
 ```
 
-### keymapでの定義
-```c
-swapper: swapper {
-    compatible = "zmk,behavior-tri-state";
-    label = "SWAPPER";
-    #binding-cells = <0>;
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <2>;
-};
-```
+### 定義済みswapper
+
+| behavior | 動作 | bindings |
+|----------|------|----------|
+| `&swapper` | Alt+Tab（ウィンドウ切替） | `<&kt LALT>, <&kp TAB>, <&kt LALT>` |
+| `&tab_next` | Ctrl+PageDown（次のタブ） | `<&kt LCTRL>, <&kp PAGE_DOWN>, <&kt LCTRL>` |
+| `&tab_prev` | Ctrl+PageUp（前のタブ） | `<&kt LCTRL>, <&kp PAGE_UP>, <&kt LCTRL>` |
+
+全てShift併用可能（ignored-key-positionsに位置8, 26を含む）
 
 ### パラメータ
 * `bindings`: 3つのbinding
   * 1番目: 開始時のアクション（モディファイア押下）
   * 2番目: 繰り返しアクション（Tabなど）
   * 3番目: 終了時のアクション（モディファイア解除）
-* `ignored-key-positions`: 終了トリガーを発火させないキー位置（swapper自身の位置を含める）
+* `ignored-key-positions`: 終了トリガーを発火させないキー位置
+  * swapper自身の位置を含める
+  * Shift併用のため位置8（sk LSHIFT）と26（mt LSHIFT）を含める
 
 ### 動作
-1. 最初に押す → Alt押し + Tab
-2. 続けて押す → Tab（Altは押したまま）
-3. ignored-key-positions以外のキーを押す or レイヤーを離れる → Altを解除
+1. 最初に押す → モディファイア押し + キー
+2. 続けて押す → キー（モディファイアは押したまま）
+3. Shiftを押しながら → 逆方向に切り替え
+4. ignored-key-positions以外のキーを押す or レイヤーを離れる → モディファイアを解除
+
+### 新しいswapper追加時
+1. keymapのbehaviorsセクションに新しいtri-state定義を追加
+2. ignored-key-positionsに必要なキー位置を設定
+3. Keymap Editorから`&新しいswapper名`で選択可能
 
 
 

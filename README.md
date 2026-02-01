@@ -93,24 +93,25 @@ bindings = <&password1>;  // このキーを押すとPASSWORD1が入力される
 ### zmk-tri-state
 
 - リポジトリ: https://github.com/dhruvinsh/zmk-tri-state
-- 用途: Alt+Tab swapper（ウィンドウ切り替え）
-- 機能: レイヤー内でAltを押し続け、レイヤーを離れるとAltを解除する「tri-state」behavior
+- 用途: ウィンドウ/タブ切り替え用swapper
+- 機能: レイヤー内でモディファイアを押し続け、レイヤーを離れると自動解除する「tri-state」behavior
 
-#### 使用例（FUNCTIONレイヤー）
+#### 定義済みswapper
 
-```c
-swapper: swapper {
-    compatible = "zmk,behavior-tri-state";
-    label = "SWAPPER";
-    #binding-cells = <0>;
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <2>;
-};
-```
+| behavior | 動作 | Shift併用 |
+|----------|------|-----------|
+| `&swapper` | Alt+Tab（ウィンドウ切替） | Shift+Tabで逆方向 |
+| `&tab_next` | Ctrl+PageDown（次のタブ） | 可能 |
+| `&tab_prev` | Ctrl+PageUp（前のタブ） | 可能 |
 
-1. 最初に押す → Alt押し + Tab
-2. 続けて押す → Tab（Altは押したまま）
-3. レイヤーを離れる → Altを解除
+#### 使い方
+
+1. 最初に押す → モディファイア押し + キー
+2. 続けて押す → キー（モディファイアは押したまま）
+3. Shiftを押しながら → 逆方向に切り替え
+4. レイヤーを離れる → モディファイアを解除
+
+Keymap Editorから `&swapper`, `&tab_next`, `&tab_prev` を選択して配置できます。
 
 ### レイヤー
 
