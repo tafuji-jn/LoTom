@@ -165,55 +165,6 @@
             bindings = <&none>;
             label = "__PASSWORD2__";
         };
-
-        password3: password3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD3__";
-        };
-
-        password4: password4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD4__";
-        };
-
-        password5: password5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD5__";
-        };
-
-        password6: password6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD6__";
-        };
-
-        password7: password7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD7__";
-        };
-
-        password8: password8 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD8__";
-        };
-
-        password9: password9 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none>;
-            label = "__PASSWORD9__";
-        };
     };
 
     keymap {
@@ -221,7 +172,7 @@
 
         default_layer {
             bindings = <
-&mt_exit_AML_on_tap LSHFT ESCAPE  &mo 6
+&mt_exit_AML_on_tap LSHFT ESCAPE  &kp ESC
 &kp Q                             &kp L     &kp U             &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
 &kp E                             &kp I     &kp A             &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C             &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
