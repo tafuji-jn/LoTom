@@ -330,10 +330,10 @@
         FUNCTION {
             bindings = <
 &bt BT_CLR  &trans
-&swapper    &bt BT_SEL 0   &bt BT_SEL 1  &trans      &trans      &trans      &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
-&tab_prev   &kp LG(LS(S))  &password1    &trans      &password4  &trans      &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
-&tab_next   &trans         &password2    &password3  &password5  &password6  &trans   &trans  &trans  &trans   &trans  &kp F11
-&kp TAB     &trans         &trans        &trans      &trans      &trans      &trans   &trans  &trans  &kp F12
+&swapper    &bt BT_SEL 0    &bt BT_SEL 1  &trans      &trans      &trans      &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
+&tab_prev   &kp LG(LS(S))   &password1    &trans      &password4  &trans      &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
+&tab_next   &trans          &password2    &password3  &password5  &password6  &trans   &trans  &trans  &trans   &trans  &kp F11
+&kp TAB     &kp LEFT_SHIFT  &trans        &trans      &trans      &trans      &trans   &trans  &trans  &kp F12
             >;
 
             sensor-bindings = <
