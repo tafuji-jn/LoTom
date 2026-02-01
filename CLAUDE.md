@@ -55,5 +55,49 @@ password1: password1 {
 2. LoTom_private/.github/workflows/build.ymlのforループを拡張
 3. LoTom_privateのSecretsに`PASSWORD10`などを追加
 
+# 外部モジュール
+
+## zmk-tri-state
+* リポジトリ: https://github.com/dhruvinsh/zmk-tri-state
+* 用途: Alt+Tab swapper（ウィンドウ切り替え）
+
+### 概要
+ZMK本体にはない「tri-state」behaviorを提供する外部モジュール。
+レイヤー内でモディファイアを押し続け、レイヤーを離れると自動的に解除する動作を実現。
+
+### west.ymlへの追加
+```yaml
+remotes:
+  - name: dhruvinsh
+    url-base: https://github.com/dhruvinsh
+projects:
+  - name: zmk-tri-state
+    remote: dhruvinsh
+    revision: main
+```
+
+### keymapでの定義
+```c
+swapper: swapper {
+    compatible = "zmk,behavior-tri-state";
+    label = "SWAPPER";
+    #binding-cells = <0>;
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <2>;
+};
+```
+
+### パラメータ
+* `bindings`: 3つのbinding
+  * 1番目: 開始時のアクション（モディファイア押下）
+  * 2番目: 繰り返しアクション（Tabなど）
+  * 3番目: 終了時のアクション（モディファイア解除）
+* `ignored-key-positions`: 終了トリガーを発火させないキー位置（swapper自身の位置を含める）
+
+### 動作
+1. 最初に押す → Alt押し + Tab
+2. 続けて押す → Tab（Altは押したまま）
+3. ignored-key-positions以外のキーを押す or レイヤーを離れる → Altを解除
+
 
 

@@ -86,6 +86,32 @@ bindings = <&password1>;  // このキーを押すとPASSWORD1が入力される
 
 ※ 本リポジトリはpublicのため、パスワード自体はpushされません。ビルド成果物(uf2)のみにパスワードが含まれます。
 
+## 外部モジュール
+
+本リポジトリでは以下の外部モジュールを使用しています。
+
+### zmk-tri-state
+
+- リポジトリ: https://github.com/dhruvinsh/zmk-tri-state
+- 用途: Alt+Tab swapper（ウィンドウ切り替え）
+- 機能: レイヤー内でAltを押し続け、レイヤーを離れるとAltを解除する「tri-state」behavior
+
+#### 使用例（FUNCTIONレイヤー）
+
+```c
+swapper: swapper {
+    compatible = "zmk,behavior-tri-state";
+    label = "SWAPPER";
+    #binding-cells = <0>;
+    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    ignored-key-positions = <2>;
+};
+```
+
+1. 最初に押す → Alt押し + Tab
+2. 続けて押す → Tab（Altは押したまま）
+3. レイヤーを離れる → Altを解除
+
 ### レイヤー
 
 - レイヤー 0 がデフォルトです
