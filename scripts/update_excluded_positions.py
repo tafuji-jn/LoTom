@@ -97,12 +97,7 @@ def extract_mouse_layer_bindings(keymap_content: str) -> list[str]:
 
 
 def get_excluded_positions(keys: list[str]) -> list[int]:
-    """&trans, &to 0, &mo 以外のキー位置を取得
-
-    &mo はスクロールレイヤー等への一時切替に使用される。
-    excluded-positionsに含めるとzip_temp_layerとの相互作用で
-    スクロール動作が正しく機能しなくなるため除外する。
-    """
+    """&trans と &to 0 以外のキー位置を取得"""
     excluded = []
     for i, key in enumerate(keys):
         # &trans は除外
@@ -110,9 +105,6 @@ def get_excluded_positions(keys: list[str]) -> list[int]:
             continue
         # &to 0 は除外（スペースの有無に対応）
         if re.match(r'&to\s*0\b', key):
-            continue
-        # &mo は除外（スクロールレイヤー切替等）
-        if re.match(r'&mo\s', key):
             continue
         excluded.append(i)
     return sorted(excluded)
