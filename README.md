@@ -60,21 +60,21 @@
 
 ## パスワードマクロについて
 
-キーマップにはパスワード入力用のマクロ (`password1`, `password2`) が定義されています。
+キーマップにはパスワード入力用のマクロ (`password1` 〜 `password9`) が定義されています。
 これらはビルド時に別のプライベートリポジトリ (LoTom_private) でSecretsの値に置換されます。
 
 ### 仕組み
 
 1. 本リポジトリ (LoTom) へのpush/PRをトリガーに、LoTom_privateでビルドが実行される
 2. LoTom_privateのGitHub SecretsからパスワードをZMKキーコードに変換
-3. `lotom.keymap`内のプレースホルダーを置換してファームウェアをビルド
+3. `lotom.keymap`内のマクロを置換してファームウェアをビルド
 
 ### 設定方法
 
 1. LoTom_privateリポジトリのSettings → Secrets and variables → Actionsで以下を設定:
-   - `PASSWORD1`: パスワード1の文字列
-   - `PASSWORD2`: パスワード2の文字列
+   - `PASSWORD1` 〜 `PASSWORD9`: パスワード文字列（必要なものだけ設定すればOK）
 2. 対応文字: 英数字(a-z, A-Z, 0-9)、主要な記号（日本語キーボードレイアウト対応）
+3. Secretsが未設定のマクロは `&none` のまま（何も入力されない）
 
 ### keymapでの使用
 
