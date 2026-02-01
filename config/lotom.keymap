@@ -71,29 +71,35 @@
         };
 
         /* Alt+Tab swapper: Shift併用で逆方向切り替え可能 */
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+
             ignored-key-positions = <2 8 26>;  // swapper, sk LSHIFT, mt LSHIFT
         };
 
         /* Ctrl+PageDown: 次のタブ（Shift併用で逆方向） */
+
         tab_next: tab_next {
             compatible = "zmk,behavior-tri-state";
             label = "TAB_NEXT";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp PAGE_DOWN>, <&kt LCTRL>;
+
             ignored-key-positions = <8 26>;  // Shiftキー
         };
 
         /* Ctrl+PageUp: 前のタブ（Shift併用で逆方向） */
+
         tab_prev: tab_prev {
             compatible = "zmk,behavior-tri-state";
             label = "TAB_PREV";
             #binding-cells = <0>;
             bindings = <&kt LCTRL>, <&kp PAGE_UP>, <&kt LCTRL>;
+
             ignored-key-positions = <8 26>;  // Shiftキー
         };
     };
@@ -311,8 +317,8 @@
 &trans                   &trans
 &kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS      &trans  &trans      &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
 &kp SLASH                &kp F7        &kp NUMBER_5  &kp F10       &kp JP_ASTERISK  &trans  &trans      &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
-&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &kp PERIOD  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&kp LS(R)                &trans        &trans        &trans        &trans        &trans  &trans      &kp LS(ENTER)    &trans        &trans
+&mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD       &trans  &kp PERIOD  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&kp LS(R)                &trans        &trans        &trans        &trans           &trans  &trans      &kp LS(ENTER)    &trans        &trans
             >;
 
             sensor-bindings = <
@@ -324,10 +330,10 @@
         FUNCTION {
             bindings = <
 &bt BT_CLR  &trans
-&swapper    &bt BT_SEL 1   &trans      &trans      &trans  &trans  &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
-&password1  &kp LG(LS(S))  &password4  &trans      &trans  &trans  &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
-&password2  &password3     &password5  &password6  &trans  &trans  &trans   &trans  &trans  &trans   &trans  &kp F11
-&kp TAB     &trans         &trans      &trans      &trans  &trans  &trans   &trans  &trans  &kp F12
+&swapper    &bt BT_SEL 0   &bt BT_SEL 1  &trans      &trans      &trans      &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
+&tab_prev   &kp LG(LS(S))  &password1    &trans      &password4  &trans      &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
+&tab_next   &trans         &password2    &password3  &password5  &password6  &trans   &trans  &trans  &trans   &trans  &kp F11
+&kp TAB     &trans         &trans        &trans      &trans      &trans      &trans   &trans  &trans  &kp F12
             >;
 
             sensor-bindings = <
