@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/te9no
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov
+    - name: dhruvinsh
+      url-base: https://github.com/dhruvinsh
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -31,6 +33,9 @@ manifest:
       revision: main
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
+      revision: main
+    - name: zmk-tri-state
+      remote: dhruvinsh
       revision: main
   self:
     path: config

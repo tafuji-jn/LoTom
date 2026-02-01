@@ -69,6 +69,15 @@
 
             tap-ms = <20>;
         };
+
+        /* Alt+Tab swapper: レイヤー内で連続Tab可能、レイヤーを離れるとAlt解除 */
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <2>;
+        };
     };
 
     combos {
@@ -296,11 +305,11 @@
 
         FUNCTION {
             bindings = <
-&bt BT_CLR    &trans
-&bt BT_SEL 0  &bt BT_SEL 1   &trans      &trans      &trans  &trans  &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
-&password1    &kp LG(LS(S))  &password4  &trans      &trans  &trans  &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
-&password2    &password3     &password5  &password6  &trans  &trans  &trans   &trans  &trans  &trans   &trans  &kp F11
-&kp TAB       &trans         &trans      &trans      &trans  &trans  &trans   &trans  &trans  &kp F12
+&bt BT_CLR  &trans
+&swapper    &bt BT_SEL 1   &trans      &trans      &trans  &trans  &trans   &kp F1  &kp F2  &kp F3   &kp F4  &kp F5
+&password1  &kp LG(LS(S))  &password4  &trans      &trans  &trans  &kp F13  &kp F6  &kp F7  &kp F8   &kp F9  &kp F10
+&password2  &password3     &password5  &password6  &trans  &trans  &trans   &trans  &trans  &trans   &trans  &kp F11
+&kp TAB     &trans         &trans      &trans      &trans  &trans  &trans   &trans  &trans  &kp F12
             >;
 
             sensor-bindings = <
