@@ -165,6 +165,55 @@
             bindings = <&none>;
             label = "__PASSWORD2__";
         };
+
+        password3: password3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD3__";
+        };
+
+        password4: password4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD4__";
+        };
+
+        password5: password5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD5__";
+        };
+
+        password6: password6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD6__";
+        };
+
+        password7: password7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD7__";
+        };
+
+        password8: password8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD8__";
+        };
+
+        password9: password9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "__PASSWORD9__";
+        };
     };
 
     keymap {
