@@ -70,13 +70,31 @@
             tap-ms = <20>;
         };
 
-        /* Alt+Tab swapper: レイヤー内で連続Tab可能、レイヤーを離れるとAlt解除 */
+        /* Alt+Tab swapper: Shift併用で逆方向切り替え可能 */
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-            ignored-key-positions = <2>;
+            ignored-key-positions = <2 8 26>;  // swapper, sk LSHIFT, mt LSHIFT
+        };
+
+        /* Ctrl+PageDown: 次のタブ（Shift併用で逆方向） */
+        tab_next: tab_next {
+            compatible = "zmk,behavior-tri-state";
+            label = "TAB_NEXT";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL>, <&kp PAGE_DOWN>, <&kt LCTRL>;
+            ignored-key-positions = <8 26>;  // Shiftキー
+        };
+
+        /* Ctrl+PageUp: 前のタブ（Shift併用で逆方向） */
+        tab_prev: tab_prev {
+            compatible = "zmk,behavior-tri-state";
+            label = "TAB_PREV";
+            #binding-cells = <0>;
+            bindings = <&kt LCTRL>, <&kp PAGE_UP>, <&kt LCTRL>;
+            ignored-key-positions = <8 26>;  // Shiftキー
         };
     };
 
