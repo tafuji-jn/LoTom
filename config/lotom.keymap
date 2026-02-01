@@ -309,8 +309,8 @@
         NUM {
             bindings = <
 &trans                   &trans
-&kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &trans  &trans      &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
-&kp SLASH                &kp F7        &kp NUMBER_5  &kp F10       &kp ASTERISK  &trans  &trans      &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
+&kp EXCLAMATION          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp JP_PLUS      &trans  &trans      &kp BACKSLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SEMICOLON
+&kp SLASH                &kp F7        &kp NUMBER_5  &kp F10       &kp JP_ASTERISK  &trans  &trans      &kp EXCLAMATION  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
 &mt LEFT_SHIFT NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &kp PERIOD  &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
 &kp LS(R)                &trans        &trans        &trans        &trans        &trans  &trans      &kp LS(ENTER)    &trans        &trans
             >;
