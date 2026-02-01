@@ -149,6 +149,21 @@
             bindings = <&kp LANGUAGE_2 &kp N8>;
             label = "ATMARK";
         };
+
+        // パスワード入力マクロ (ビルド時にSecretsの値で置換される)
+        password1: password1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <__PASSWORD1__>;
+            label = "PASSWORD1";
+        };
+
+        password2: password2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <__PASSWORD2__>;
+            label = "PASSWORD2";
+        };
     };
 
     keymap {
