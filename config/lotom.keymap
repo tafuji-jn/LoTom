@@ -265,9 +265,9 @@
         default_layer {
             bindings = <
 &mt_exit_AML_on_tap LSHFT ESCAPE  &kp ESC
-&kp Q                             &kp L     &kp U             &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
-&kp E                             &kp I     &kp A             &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C             &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
+&kp Q                             &kp L     &kp U                   &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
+&kp E                             &kp I     &kp A                   &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C                   &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
 &kp LEFT_ALT                      &kp LGUI  &lt_quick 5 LANGUAGE_1  &kp BACKSPACE  &lt 4 SPACE  &kp LEFT_CONTROL  &kp TAB         &lt 3 ENTER  &kp LC(Y)  &kp LC(Z)
             >;
 
@@ -281,7 +281,7 @@
             bindings = <
 &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans    &kp LC(PAGE_UP)    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(C)  &mkp MB1  &mkp MB3           &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(C)  &mkp MB1  &mkp MB3           &mkp MB2  &mo 2
 &trans  &trans  &trans  &trans  &trans  &trans  &trans         &kp LC(V)  &trans    &kp LC(PAGE_DOWN)  &trans    &to 0
 &trans  &trans  &trans  &trans  &trans  &to 0   &kp BACKSPACE  &trans     &trans    &trans
             >;
