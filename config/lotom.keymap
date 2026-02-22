@@ -264,7 +264,7 @@
 
         default_layer {
             bindings = <
-&mt_exit_AML_on_tap LSHFT ESCAPE  &kp ESC
+&mt_exit_AML_on_tap LSHFT ESCAPE  &mo 6
 &kp Q                             &kp L     &kp U                   &kp COMMA      &kp PERIOD   &kp LC(S)         &sk LEFT_SHIFT  &kp F        &kp W      &kp R      &kp Y  &kp P
 &kp E                             &kp I     &kp A                   &kp O          &kp MINUS    &kp LC(C)         &kp LS(CAPS)    &kp K        &kp T      &kp N      &kp S  &kp H
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X     &kp C                   &kp V          &kp LC(X)    &kp LC(V)         &kp LA(ENTER)   &kp G        &kp D      &kp M      &kp J  &kp B
