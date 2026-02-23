@@ -11,7 +11,6 @@
         zmk,kscan = &kscan0;
         zmk,physical-layout = &default_layout;
         zephyr,display = &oled;
-        zephyr,console = &cdc_acm_uart;
     };
 
     kscan0: kscan0 {
@@ -134,9 +133,3 @@
 
 &xiao_serial { status = "disabled"; };
 &uart0 { status = "disabled";};
-
-&usbd {
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
-};
