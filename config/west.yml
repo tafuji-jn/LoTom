@@ -14,8 +14,8 @@ manifest:
       url-base: https://github.com/oleksandrmaslov
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
-    - name: tafuji-jn
-      url-base: https://github.com/tafuji-jn
+    - name: t-ogura
+      url-base: https://github.com/t-ogura
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -39,8 +39,9 @@ manifest:
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
-    - name: lotom-debug-module
-      remote: tafuji-jn
-      revision: master
+    - name: prospector-zmk-module
+      remote: t-ogura
+      revision: v2.1.0
+      path: modules/prospector-zmk-module
   self:
     path: config
