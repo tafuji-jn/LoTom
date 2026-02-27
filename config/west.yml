@@ -16,6 +16,8 @@ manifest:
       url-base: https://github.com/dhruvinsh
     - name: t-ogura
       url-base: https://github.com/t-ogura
+    - name: tafuji-jn
+      url-base: https://github.com/tafuji-jn
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -40,8 +42,8 @@ manifest:
       remote: dhruvinsh
       revision: main
     - name: prospector-zmk-module
-      remote: t-ogura
-      revision: v2.0.0
+      remote: tafuji-jn
+      revision: main
       path: modules/prospector-zmk-module
   self:
     path: config
